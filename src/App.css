@@ -1,0 +1,170 @@
+/* write your css here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.gradient {
+  /* font-size: 32px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+  background: #c43636; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #c43636,
+    #aa00ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #c43636,
+    #aa00ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hello {
+  box-shadow: 15px 15px whitesmoke;
+}
+
+.blur-semicircle {
+  position: absolute;
+  left: 50px;
+  top: 300px;
+  width: 70px;
+  height: 70px;
+  background-color: #226dbc;
+  filter: blur(282px);
+}
+
+.hello1 {
+    background: #68C5CF;
+    background: linear-gradient(to right, #68C5CF 36%, #5551CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.buttonBox{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgb(255, 255, 255) 0px 3px 5px -3px;
+}
+
+.glass{
+/* From https://css.glass */
+background: rgba(13, 18, 36, 0.84);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+}
+
+.boxShadow{
+  box-shadow: 13px 15px 0px 0px rgba(255,255,255,1);
+-webkit-box-shadow: 13px 15px 0px 0px rgba(255,255,255,1);
+-moz-box-shadow: 13px 15px 0px 0px rgba(255,255,255,1);
+}
+
+.blur-semicircle {
+  position: absolute;
+  left: 30px;
+  top: -30px;
+  width: 200px;
+  height: 200px;
+  background-color: hsl(0, 54%, 40%);
+  filter: blur(150px);
+}
+.blur-semicircle1 {
+  position: absolute;
+  left: 30px;
+  top: -30px;
+  width: 200px;
+  height: 200px;
+  background-color: hsl(230, 49%, 54%);
+  filter: blur(150px);
+}
+.blur-semicircle2 {
+  position: absolute;
+  left: 300px;
+  top: -600px;
+  width: 250px;
+  height: 250px;
+  background-color: hsl(230, 49%, 54%);
+  filter: blur(150px);
+}
+
+.video{
+  box-shadow: -9px -11px 19px 1px rgba(133,139,242,0.75);
+-webkit-box-shadow: -9px -11px 19px 1px rgba(133,139,242,0.75);
+-moz-box-shadow: -9px -11px 19px 1px rgba(133,139,242,0.75);
+}
+
+.video1{
+  box-shadow: -9px -11px 19px 1px rgba(159, 163, 233, 0.75);
+-webkit-box-shadow: -9px -11px 19px 1px rgba(159, 163, 233, 0.75);
+-moz-box-shadow: -9px -11px 19px 1px rgba(159, 163, 233, 0.75);
+}
+
+.homepage_bg{
+  background: url("../src/assets/Images/bghome.svg");
+}
+
+.timelineImagecircle {
+  position: absolute;
+  left: 0px;
+  top: -30px;
+  width: 100px;
+  height: 100px;
+  background-color: hsl(230, 49%, 54%);
+  filter: blur(150px);
+}
+
+.boxShadow1{
+  box-shadow: -9px -10px 0px 0px rgba(255,255,255,0.75);
+-webkit-box-shadow: -9px -10px 0px 0px rgba(255,255,255,0.75);
+-moz-box-shadow: -9px -10px 0px 0px rgba(255,255,255,0.75);
+}
+
+.hello3 {
+  box-shadow: 15px 15px rgb(230, 246, 60);
+}
+
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side,#474bff 94%,#0000) top/9px 9px no-repeat,
+         conic-gradient(#0000 30%,#474bff);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+     transform: rotate(1turn);
+  }
+}
+
+.vision{
+  background: linear-gradient(118.41deg, #E65C00 -6.05%, #F9D423 106.11%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+}
+
+.mission{
+  background: linear-gradient(118.19deg, #1FA2FF -3.62%, #12D8FA 50.44%, #A6FFCB 104.51%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
