@@ -21,7 +21,7 @@ function Navbar() {
   const ref = useRef(null)
   const [subLinks, setSubLinks] = useState([])
   const [loading, setLoading] = useState(false)
-  const [open,setOpen] = useState(true);
+  const [open,setOpen] = useState(false);
 
   useOnClickOutside(ref, () => setOpen(false))
 

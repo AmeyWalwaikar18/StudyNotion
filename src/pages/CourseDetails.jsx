@@ -15,6 +15,9 @@ import { fetchCourseDetails } from "../services/operations/courseDetailsAPI";
 import { buyCourse } from "../services/operations/studentFeaturesAPI";
 import GetAvgRating from "../utils/avgRating";
 import Error from "./Error";
+import { ACCOUNT_TYPE } from "../utils/constants";
+import { toast } from "react-hot-toast";
+import { addToCart } from "../slices/cartSlice";
 
 function CourseDetails() {
   const { user } = useSelector((state) => state.profile);
@@ -116,6 +119,25 @@ function CourseDetails() {
     });
   };
 
+  const handleAddToCart = () => {
+    if (user && user?.accountType === ACCOUNT_TYPE.INSTRUCTOR) {
+      toast.error("You are an Instructor. You can't buy a course.")
+      return
+    }
+    if (token) {
+      dispatch(addToCart(response?.data?.courseDetails))
+      return
+    }
+    setConfirmationModal({
+      text1: "You are not logged in!",
+      text2: "Please login to add To Cart",
+      btn1Text: "Login",
+      btn2Text: "Cancel",
+      btn1Handler: () => navigate("/login"),
+      btn2Handler: () => setConfirmationModal(null),
+    })
+  };
+
   if (paymentLoading) {
     // console.log("payment loading")
     return (
@@ -174,7 +196,7 @@ function CourseDetails() {
               <p className="space-x-3 pb-4 text-3xl font-semibold text-richblack-5">
                 Rs. {price}
               </p>
-              <button
+              {/* <button
                 className="yellowButton rounded-md bg-yellow-50 text-richblack-900 px-3 py-2"
                 onClick={handleBuyCourse}
               >
@@ -182,7 +204,25 @@ function CourseDetails() {
               </button>
               <button className="blackButton rounded-md bg-yellow-50 text-richblack-900 px-3 py-2">
                 Add to Cart
+              </button> */}
+
+<button
+              className="yellowButton rounded-md px-3 py-2 bg-yellow-50 text-richblack-900"
+              onClick={
+                user && response?.data?.courseDetails?.studentsEnrolled.includes(user?._id)
+                  ? () => navigate("/dashboard/enrolled-courses")
+                  : handleBuyCourse
+              }
+            >
+              {user && response?.data?.courseDetails?.studentsEnrolled.includes(user?._id)
+                ? "Go To Course"
+                : "Buy Now"}
+            </button>
+            {(!user || !response?.data?.courseDetails?.studentsEnrolled.includes(user?._id)) && (
+              <button onClick={handleAddToCart} className="blackButton bg-yellow-50 px-3 py-2 rounded-md text-richblack-900">
+                Add to Cart
               </button>
+            )}
             </div>
           </div>
           {/* Courses Card */}

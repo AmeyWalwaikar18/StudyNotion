@@ -17,13 +17,17 @@ const CourseSlider = ({Courses}) => {
           slidesPerView={1}
           spaceBetween={25}
           loop={true}
-          modules={[FreeMode, Pagination]}
+          pagination={{
+            dynamicBullets: true,
+            // type: 'fraction'
+          }}
+          modules={[FreeMode, Pagination,Navigation]}
           breakpoints={{
             1024: {
               slidesPerView: 3,
             },
           }}
-          className="max-h-[30rem] mx-auto"
+          className="max-h-[30rem] mx-auto text-white"
         >
           {Courses?.map((course, i) => (
             <SwiperSlide key={i}>
