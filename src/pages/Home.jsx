@@ -96,7 +96,7 @@ const Home = () => {
           }}
           codeblock={`<!DOCTYPE html>
                        <html>
-                       head><title>Example</title><linkrel="stylesheet"href="styles.css">
+                       head><title>Example</title><linkrel="stylesheet"href="app.css">
                        /head>
                        body>
                        h1><ahref="/">Header</a>
@@ -130,7 +130,7 @@ const Home = () => {
           }}
           codeblock={`<!DOCTYPE html>
                        <html>
-                       head><title>Example</title><linkrel="stylesheet"href="styles.css">
+                       head><title>Example</title><linkrel="stylesheet"href="app.css">
                        /head>
                        body>
                        h1><ahref="/">Header</a>
@@ -195,8 +195,8 @@ const Home = () => {
       <div className="w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         <InstructorSection />
 
-        <div className="w-full px-4 lg:block hidden">
-          <span className="text-white flex justify-center font-bold text-4xl mb-10">Reviews from other learners</span>
+        <div className="w-full px-4 block">
+          <span className="text-white flex justify-center font-bold text-3xl md:text-4xl mb-10">Reviews from other learners</span>
           <ReviewSlider />
         </div>
       </div>

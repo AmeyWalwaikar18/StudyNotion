@@ -141,8 +141,8 @@ const About = () => {
       </section>
 
       <section className="w-full">
-        <div className="w-full px-4 lg:block hidden">
-          <span className="text-white flex justify-center font-bold text-4xl mb-10">Reviews from other learners</span>
+        <div className="w-full px-4">
+          <span className="text-white flex justify-center font-bold text-3xl md:text-4xl mb-10">Reviews from other learners</span>
           <ReviewSlider />
         </div>
         <Footer />

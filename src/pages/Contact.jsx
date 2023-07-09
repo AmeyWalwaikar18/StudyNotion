@@ -20,10 +20,10 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="lg:block hidden">
+      <div>
       <div className="relative mx-auto my-2 mt-16 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         {/* Reviws from Other Learner */}
-        <h1 className="text-center text-4xl flex justify-center w-full font-semibold mt-8">
+        <h1 className="text-center text-3xl md:text-4xl flex justify-center w-full font-semibold mt-8">
           Reviews from other learners
         </h1>
         <ReviewSlider />
