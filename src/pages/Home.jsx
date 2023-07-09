@@ -72,7 +72,7 @@ const Home = () => {
       </div>
 
       {/* code section 1 */}
-      <div className="mx-auto my-[100px] w-[90%] md:w-[80%]">
+      <div className="mx-auto my-[100px] w-[96%] md:w-[80%]">
         <CodeBlocks
           position={"lg:flex-row"}
           heading={
@@ -109,7 +109,7 @@ const Home = () => {
       </div>
 
       {/* code section 2 */}
-      <div className="mx-auto my-[100px] w-[90%] md:w-[80%] mb-[920px] md:mb-[520px]">
+      <div className="mx-auto my-[100px] w-[96%] md:w-[80%] mb-[920px] md:mb-[520px]">
         <CodeBlocks
           position={"lg:flex-row-reverse"}
           heading={
