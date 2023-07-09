@@ -37,7 +37,7 @@ const ExploreMore = () => {
       </p>
 
       <div className="hidden md:block">
-        <div className="mt-8 w-[75%]  justify-between mx-auto flex flex-row rounded-full bg-richblack-800 mb-5 border-richblack-100 px-1 py-1">
+        <div className="mt-8 w-[75%] justify-between mx-auto flex flex-row rounded-full bg-richblack-800 mb-5 border-richblack-100 px-1 py-1">
           {tabsName.map((element, index) => {
             return (
               <div
