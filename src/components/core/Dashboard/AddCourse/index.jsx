@@ -3,7 +3,7 @@ import RenderSteps from "./RenderSteps"
 export default function AddCourse() {
   return (
     <>
-      <div className="flex z-10 w-full items-start gap-x-6">
+      <div className="flex overflow-x-hidden z-10 w-full items-start gap-x-6">
         <div className="flex flex-1 flex-col w-full">
           <h1 className="mb-14 ml-16 md:ml-0 text-3xl font-medium text-richblack-5">
             Add Course
